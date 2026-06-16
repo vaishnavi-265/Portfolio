@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.14);
+  --foreground: #ffffff;
+  --muted: #c9c9c9;
+  --accent: #d4a017;
+  --accent-soft: rgba(212, 160, 23, 0.18);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --shadow-gold: 0 20px 60px rgba(212, 160, 23, 0.18);
+  --shadow-dark: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(212, 160, 23, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(255, 255, 255, 0.08), transparent 20%),
+    radial-gradient(circle at 50% 72%, rgba(212, 160, 23, 0.08), transparent 25%),
+    linear-gradient(135deg, #050505 0%, #0b0b0b 44%, #111111 100%);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-dark);
+}
+
+.gold-outline {
+  box-shadow:
+    0 0 0 1px rgba(212, 160, 23, 0.36),
+    0 0 30px rgba(212, 160, 23, 0.22),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #fff7d1 0%, #d4a017 55%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 24px rgba(212, 160, 23, 0.24); }
+  50% { box-shadow: 0 0 42px rgba(212, 160, 23, 0.4); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
