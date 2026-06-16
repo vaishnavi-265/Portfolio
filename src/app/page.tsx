@@ -70,7 +70,7 @@ const experiences = [
   {
     title: "AI Engineer",
     company: "ADVINTEK",
-    date: "Jan 2021 - Dec 2023",
+    date: "Aug 2021 - Dec 2023",
     meta: "Hyderabad, Telangana, India",
     points: [
       "Built production AI systems",
